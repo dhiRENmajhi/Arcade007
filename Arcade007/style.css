@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(40px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 1000px;
+    padding: 20px 0px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    padding: 5px 20px;
+    font-size: 1rem;
+    color: #faa41a;
+    border-radius: 30px;
+    border: 1px solid #faa41a;
+    transition: all 0.2s ease;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown svg {
+    height: 1rem;
+    fill: #faa41a;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #fed09f;
+    border: 1px solid #ba2e27;
+    background-color: #ba2e27;
+}
+
+.dropdown:hover svg {
+    fill: #fed09f;
+    transform: rotateZ(180deg);
+}
+
+
+
+.DropFromNav {
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #47120f;
+    transition: all 1s ease-in-out;
+}
+
+.DropFromNav .inside_leaderboard {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    padding: 100px 0px;
+}
+
+.DropFromNav .inside_leaderboard .top3 {
+    width: 60%;
+    background-color: #2b0b09;
+    border-radius: 20px;
+}
+
+.DropFromNav .inside_leaderboard .top4-10 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.top3 .top3_card {
+    display: flex;
+    height: 120px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.top3 .top3_card img {
+    border-radius: 500px;
+    margin-right: 20px;
+    transition: all 0.2s ease;
+}
+
+.top3 .top3_card .leader_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top3 .top3_card .leader_info .name_holder {
+    display: flex;
+    align-items: center;
+}
+
+.increase {
+    display: flex;
+    font-size: 1rem;
+    color: #00ff00;
+}
+
+.decrease {
+    display: flex;
+    font-size: 1rem;
+    color: #ff0000;
+}
+
+.increase svg {
+    width: 1rem;
+    fill: #00ff00;
+    transform: rotateZ(180deg);
+}
+
+.decrease svg {
+    width: 1rem;
+    fill: #ff0000;
+}
+
+.leader_info .name_holder .player_name {
+    color: #fed09f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.leader_info .name_holder .rank {
+    color: #ba2e27;
+    background-color: #faa41a;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.leader_info .score_holder {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: #fed09f;
+    transition: all 0.2s ease;
+}
+
+.arcade_score {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.coins {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.leader_info .score_holder h3 {
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    color: #fed09f;
+}
+
+.top3 .top3_card:hover img {
+    border: 5px solid #ba2e27;
+}
+
+.top3 .top3_card:hover {
+    background-color: #120504;
+}
+
+.top3 .top3_card:hover .player_name {
+    color: #ba2e27;
+}
+
+.top3 .top3_card:hover .score_holder h3 {
+    color: #ba2e27;
+}
+
+
+
+.top4-10 .top4-10_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.top4-10 .top4-10_card .name_rank {
+    display: flex;
+    align-items: center;
+}
+
+.top4-10 .top4-10_card .rank {
+    color: #ba2e27;
+    background-color: #faa41a;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.top4-10 .top4-10_card .player_name {
+    color: #fed09f;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.top4-10 .top4-10_card:hover {
+    background-color: #2b0b09;
+}
+
+
+
+
+
+
+
+
+
+.Section {
+    color: #ba2e27;
+    font-size: 3rem;
+    border-block-end: 2px solid #faa41a;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+.Games {
+    display: flex;
+    justify-content: center;
+}
+
+.Games .inside_games {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.most_played {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -30px 0;
+}
+
+.most_played .game_card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 48%;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+}
+
+.most_played .game_card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.most_played .game_card .game_name {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #faa41a;
+    transition: all 0.3s ease;
+}
+
+.most_played .game_card:hover {
+    background-color: #ba2e27;
+}
+
+.most_played .game_card:hover .game_name {
+    color: #fed09f;
+}
+
+.most_played .game_card:hover .box {
+    transition: all 0.3s ease;
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #ba2e27;
+}
+
+.inside_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: 50px 0px;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credits .copyright {
+    color: #fed09f;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.credits .social_links svg {
+    margin: 0 20px;
+    fill: #fed09f;
+    transition: all 0.2s ease;
+}
+
+.credits .social_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.credits .social_links:hover {
+    background-color: black;
+}
+
+.credits .social_links svg:hover {
+    fill: #ba2e27;
+}
