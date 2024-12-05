@@ -5,3 +5,6 @@
 ---
 
 ![pageview](Arcade007.gif)
+
+
+*Thanks for checking out<sup>😇</sup>*
